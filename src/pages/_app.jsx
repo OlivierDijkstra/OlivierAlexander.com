@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'tailwindcss/tailwind.css';
+import 'styles/global.css';
 
 function MyApp({ Component, pageProps }) {
 	return (
