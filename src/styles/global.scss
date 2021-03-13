@@ -1,3 +1,5 @@
+@import "helpers";
+
 * {
   box-sizing: border-box;
 }
@@ -9,8 +11,8 @@ html {
 
   font-size: 112.5%;
 
-  background: #131415;
-  color: #fafbfc;
+  background: $bg;
+  color: $text;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
