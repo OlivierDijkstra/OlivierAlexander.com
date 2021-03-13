@@ -19,7 +19,7 @@ class MyDocument extends Document {
 					/>
 				</Head>
 
-				<body>
+				<body className="bg-bg text-primary">
 					<Main />
 					<NextScript />
 				</body>
