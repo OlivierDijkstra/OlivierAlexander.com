@@ -19,9 +19,9 @@ export default function Aurora() {
 			<div ref={auroraRef}>
 				<motion.img
 					animate={{
-						rotateZ: [210, 390, 210, 340, 210],
+						rotateZ: [210, 330, 210, 340, 210],
 						rotateX: [0, 50, 0, 25, 0],
-						opacity: [0.2, 0.6, 0.3, 0.5, 0.2]
+						opacity: [0.4, 0.2, 0.3, 0.6, 0.4]
 					}}
 					transition={{ duration: 60, repeat: Infinity }}
 					src="/aurora.png"
