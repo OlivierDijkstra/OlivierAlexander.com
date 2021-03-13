@@ -1,18 +1,21 @@
 import React from 'react';
+import Layout from 'components/Layout';
+import Link from 'components/Link';
 
 export default function Page() {
 	return (
-		<div>
-			<h2 className="text-8xl mb-5">Hello world.</h2>
-			<h2 className="text-4xl mb-4">Hello world.</h2>
-			<h3 className="text-3xl mb-3">Hello world.</h3>
-			<h4 className="text-2xl mb-2">Hello world.</h4>
-			<h5 className="text-xl mb-2">Hello world.</h5>
+		<Layout>
+			<h1 className="text-8xl mb-12">🚀</h1>
 
-			<p className="text-base">
-				Lorem ipsum. This is just some sample text to fill a black or dark
-				background.
+			<p className="text-base font-light leading-relaxed">
+				Developer of iSeats, Freelance frontend / backend developer, Lover of
+				pizzas, Learning everyday to become a better developer.
 			</p>
-		</div>
+
+			<div className="mt-12 grid gap-2 grid-cols-1">
+				<Link href="https://github.com/OlivierDijkstra">Github</Link>
+				<Link href="https://twitter.com/Oli12392498">Twitter</Link>
+			</div>
+		</Layout>
 	);
 }

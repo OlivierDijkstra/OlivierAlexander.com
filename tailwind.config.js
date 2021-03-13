@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 const fonts = [
 	'Inter',
 	'-apple-system',
@@ -18,13 +20,17 @@ module.exports = {
 				primary: '#0162ff'
 			},
 			textColor: {
-				primary: '#fafbfc'
+				primary: '#fafbfc',
+				link: '#0162ff'
 			},
 			fontFamily: {
 				sans: fonts
 			},
 			borderRadius: {
 				DEFAULT: '8px'
+			},
+			borderColor: {
+				link: '#0162ff'
 			},
 			fontSize: {
 				'4xl': ['4.292rem', '6rem'],
