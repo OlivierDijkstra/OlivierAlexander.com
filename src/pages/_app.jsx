@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'styles/index.scss';
+import 'styles/global.scss';
 
 function MyApp({ Component, pageProps }) {
-	return <Component {...pageProps} />;
+	return (
+		<>
+			<title>Olivier Alexander</title>
+
+			<Component {...pageProps} />
+		</>
+	);
 }
 
 MyApp.propTypes = {
