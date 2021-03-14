@@ -22,6 +22,8 @@
 	width: 90%;
 	height: 90%;
 
+	z-index: -1;
+
 	transform-style: preserve-3d;
 
 	will-change: transform;
