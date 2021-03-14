@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/OlivierDijkstra/OlivierAlexander.com#readme",
   "dependencies": {
+    "cupertino-pane": "^1.2.5",
     "framer-motion": "^3.10.3",
     "next": "^10.0.8",
     "prop-types": "^15.7.2",

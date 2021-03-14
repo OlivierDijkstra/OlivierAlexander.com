@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
 	}
 
 	return (
-		<div onMouseMove={handleMouseMove}>
+		<div onMouseMove={handleMouseMove} className="content">
 			<title>Olivier Alexander</title>
 
 			<AuroraContext.Provider value={{ aurora }}>
