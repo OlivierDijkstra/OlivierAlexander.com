@@ -35,3 +35,11 @@
 
 	will-change: transform, opacity;
 }
+
+.pane {
+	background-color: #131415 !important;
+
+	color: #fafbfc !important;
+
+	padding: 25px !important;
+}
