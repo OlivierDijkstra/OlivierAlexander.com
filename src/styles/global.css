@@ -2,44 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-.aurora {
-	position: absolute;
-	top: 0;
-	left: 0;
+@layer base {
+	html,
+	body {
+		margin: 0;
+		padding: 0;
 
-	height: 100vh;
-	width: 100vw;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 
-	z-index: -1;
+		background-color: #0a0a0b;
+
+		@apply text-white;
+	}
 }
 
-.aurora div {
-	position: absolute;
-
-	top: 0;
-	right: 0;
-
-	width: 90%;
-	height: 90%;
-
-	z-index: -1;
-
-	transform-style: preserve-3d;
-
-	will-change: transform;
+@layer components {
+	.link {
+		@apply hover:underline font-semibold;
+	}
 }
 
-.aurora img {
-	width: 100%;
-	height: 100%;
-
-	will-change: transform, opacity;
-}
-
-.pane {
-	background-color: #131415 !important;
-
-	color: #fafbfc !important;
-
-	padding: 25px !important;
+@layer utilities {
+	.blur {
+		backdrop-filter: blur(20px);
+	}
 }
