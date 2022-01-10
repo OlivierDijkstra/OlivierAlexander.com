@@ -5,8 +5,6 @@ import notion from "@lib/notion";
 import Link from "next/link";
 
 export default function Home({ works }) {
-  console.log(works);
-
   return (
     <Layout>
       <Reveal>
