@@ -45,12 +45,12 @@ export default function CommandBar({ children }) {
             <KBarAnimator className="w-full max-w-xl">
               <div
                 className="smooth-shadow dark:shadow-none 
-                dark:bg-black bg-white
+                dark:bg-neutral-900 bg-white
                 dark:bg-opacity-75 dark:backdrop-filter dark:backdrop-blur-md
                 w-full py-2 px-2 rounded-xl"
               >
                 <KBarSearch
-                  className="w-full p-4 outline-none mb-4 bg-gray-50 dark:bg-neutral-900 rounded"
+                  className="w-full p-4 outline-none mb-4 bg-gray-50 dark:bg-neutral-800 rounded"
                   placeholder="Search"
                 />
 
