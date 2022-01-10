@@ -2,11 +2,10 @@ import Layout from "@components/Layout";
 import Reveal from "@components/Reveal";
 import TextLink from "@components/TextLink";
 import { STAGGER_DELAY } from "@constants/animations";
-import tools from "@constants/tools";
-import Image from "next/image";
+import notion from "@lib/notion";
 import { ArrowRight } from "phosphor-react";
 
-export default function Tools() {
+export default function Tools({ tools }) {
   return (
     <Layout>
       <h1 className="mb-4 text-2xl font-medium">Tools</h1>
@@ -23,49 +22,59 @@ export default function Tools() {
       </Reveal>
 
       <div className="grid grid-cols-1 gap-8 mt-16">
-        {tools.map(({ name, description, image, url }, i) => (
-          <Reveal
-            delay={i === 0 ? STAGGER_DELAY : STAGGER_DELAY + STAGGER_DELAY * i}
-            key={name.toLowerCase()}
-          >
-            <a href={url} target="_blank" rel="noreferrer">
-              <article className="group grid auto-cols-max grid-flow-col gap-4 items-center">
-                <span
-                  className="grid place-items-center 
+        {tools.map(({ properties: { name, description, icon, url } }, i) => {
+          return (
+            <Reveal
+              delay={
+                i === 0 ? STAGGER_DELAY : STAGGER_DELAY + STAGGER_DELAY * i
+              }
+              key={name.title[0].plain_text.toLowerCase()}
+            >
+              <a href={url.url} target="_blank" rel="noreferrer">
+                <article className="group grid auto-cols-max grid-flow-col gap-4 items-center">
+                  <span
+                    className="grid place-items-center
                   w-20 h-20 p-2 rounded-full bg-gray-100 dark:bg-neutral-800
                   text-4xl"
-                >
-                  {typeof image === "string" ? (
-                    image
-                  ) : (
-                    <Image
-                      src={image}
-                      width={50}
-                      height={50}
-                      objectFit="contain"
-                      placeholder="blur"
-                      alt={name}
-                    />
-                  )}
-                </span>
+                  >
+                    {icon.rich_text[0].plain_text}
+                  </span>
 
-                <div className="w-80">
-                  <h2 className="font-medium text-xl">{name}</h2>
-                  <p className="text-gray-500">{description}</p>
-                </div>
+                  <div className="w-80">
+                    <h2 className="font-medium text-xl">
+                      {name.title[0].plain_text}
+                    </h2>
+                    <p className="text-gray-500">
+                      {description.rich_text[0].plain_text}
+                    </p>
+                  </div>
 
-                <span
-                  className="text-gray-500 
+                  <span
+                    className="text-gray-500
                   transform-gpu transition-transform duration-75
                   group-hover:translate-x-2 "
-                >
-                  <ArrowRight size={32} weight="thin" />
-                </span>
-              </article>
-            </a>
-          </Reveal>
-        ))}
+                  >
+                    <ArrowRight size={32} weight="thin" />
+                  </span>
+                </article>
+              </a>
+            </Reveal>
+          );
+        })}
       </div>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const { results } = await notion.databases.query({
+    database_id: "8fd7c87d8ee748999adaebbba27767ef",
+    sorts: [{ property: "created_at", direction: "ascending" }],
+  });
+
+  return {
+    props: {
+      tools: results,
+    },
+  };
 }
