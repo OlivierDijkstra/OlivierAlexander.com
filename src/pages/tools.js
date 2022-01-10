@@ -76,5 +76,6 @@ export async function getStaticProps() {
     props: {
       tools: results,
     },
+    revalidate: 3600,
   };
 }
