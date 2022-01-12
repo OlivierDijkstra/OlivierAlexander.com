@@ -31,26 +31,26 @@ export default function Home({ works }) {
             </h2>
 
             <ul>
-              {works.map(({ properties: { name, description, url } }) => (
+              {works.map(({ properties: { name, description, url, slug } }) => (
                 <li key={name.title[0].plain_text} className="mb-6">
-                  <a
-                    className="flex group"
-                    href={url.url}
-                    target="_blank"
-                    rel="noreferrer"
+                  <Link
+                    href={`/[slug]`}
+                    as={`/${slug.rich_text[0].plain_text}`}
                   >
-                    <div className="pr-2">
-                      <h3 className="font-medium">
-                        {name.title[0].plain_text}
-                      </h3>
+                    <a className="flex group">
+                      <div className="pr-2">
+                        <h3 className="font-medium">
+                          {name.title[0].plain_text}
+                        </h3>
 
-                      <p className="text-sm">
-                        {description.rich_text[0].plain_text}
-                      </p>
-                    </div>
+                        <p className="text-sm">
+                          {description.rich_text[0].plain_text}
+                        </p>
+                      </div>
 
-                    <LinkArrow size={16} />
-                  </a>
+                      <LinkArrow size={16} />
+                    </a>
+                  </Link>
                 </li>
               ))}
             </ul>
