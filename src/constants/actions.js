@@ -1,28 +1,10 @@
 function actions(router) {
   return [
-    // {
-    //   id: "group",
-    //   name: "Group",
-    //   shortcut: ["g"],
-    //   keywords: "group",
-    //   type: "group",
-    //   section: "group",
-    // },
-    // {
-    //   id: "blog",
-    //   name: "Blog",
-    //   shortcut: ["b"],
-    //   keywords: "blog",
-    //   perform: () => (window.location.pathname = "blog"),
-    //   type: "link",
-    //   section: "stuff",
-    //   parent: "links",
-    // },
     {
-      id: "works",
-      name: "Works",
-      shortcut: ["w"],
-      keywords: "works work portfolio",
+      id: "home",
+      name: "Home",
+      shortcut: ["h"],
+      keywords: "home index",
       perform: () => router.push("/"),
       type: "link",
       section: "navigation",
@@ -50,7 +32,6 @@ function actions(router) {
       name: "Github",
       shortcut: ["g"],
       keywords: "git github",
-      // Open github in a new tab
       perform: () =>
         window.open("https://github.com/OlivierDijkstra", "_blank"),
       type: "github",
@@ -61,7 +42,6 @@ function actions(router) {
       name: "Twitter",
       shortcut: ["t"],
       keywords: "twitter tweet contact",
-      // Open github in a new tab
       perform: () => window.open("https://twitter.com/OndanksEchter", "_blank"),
       type: "twitter",
       section: "other",
