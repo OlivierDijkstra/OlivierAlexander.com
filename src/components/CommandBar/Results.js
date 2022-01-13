@@ -12,6 +12,18 @@ export default function Results() {
   });
 
   useEffect(() => {
+    if (wrapperRef.current) {
+      // Get the first element in wrapperRef
+      const firstElement = wrapperRef.current.firstElementChild;
+
+      if (firstElement) {
+        // Remove max-height
+        firstElement.style.maxHeight = "";
+      }
+    }
+  }, [wrapperRef]);
+
+  useEffect(() => {
     if (commandResults.length === 0) {
       setHighlight(null);
     }
