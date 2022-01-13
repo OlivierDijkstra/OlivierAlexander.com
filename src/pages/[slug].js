@@ -2,16 +2,39 @@ import Layout from "@components/Layout";
 import Reveal from "@components/Reveal";
 import Builder from "@lib/builder";
 import notion from "@lib/notion";
+import { NextSeo } from "next-seo";
 
-export default function Work({ work, blocks }) {
+export default function Work({ work, blocks, slug }) {
   const {
     properties: { name, description },
   } = work;
 
+  const seo = {
+    title: name.title[0].plain_text,
+    description: description.rich_text[0].plain_text,
+  };
+
   const builder = new Builder(blocks);
+
+  const imageBlocks = builder.findBlocksByType("image");
+  const imageSeo = imageBlocks.map((block) => {
+    return {
+      url: block.image.file.url,
+    };
+  });
 
   return (
     <Layout>
+      <NextSeo
+        {...seo}
+        openGraph={{
+          ...seo,
+          url: `https://olivierdijkstra.com/${slug}`,
+          type: "article",
+          imageSeo,
+        }}
+      />
+
       <Reveal>
         <header className="mb-4 prose prose-neutral">
           <h1 className="font-semibold dark:text-gray-200">
@@ -67,6 +90,7 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       work,
       blocks,
+      slug,
     },
     revalidate: 3600,
   };

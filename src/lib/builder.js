@@ -131,6 +131,10 @@ class Builder {
     }
   }
 
+  findBlocksByType(type) {
+    return this.blocks.filter((block) => block.type === type);
+  }
+
   build() {
     return this.blocks.map((block) => this.handleBlock(block));
   }

@@ -3,11 +3,19 @@ import Reveal from "@components/Reveal";
 import TextLink from "@components/TextLink";
 import { STAGGER_DELAY } from "@constants/animations";
 import notion from "@lib/notion";
+import { NextSeo } from "next-seo";
 import { ArrowRight } from "phosphor-react";
 
 export default function Tools({ tools }) {
+  const seo = {
+    title: "Tools",
+    description: "Tools I use to build and maintain my projects.",
+  };
+
   return (
     <Layout>
+      <NextSeo {...seo} openGraph={seo} />
+
       <h1 className="mb-4 text-2xl font-medium">Tools</h1>
 
       <Reveal delay={STAGGER_DELAY}>
