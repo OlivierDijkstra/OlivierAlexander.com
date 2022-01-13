@@ -69,7 +69,7 @@ class Builder {
 
   heading1Block(block, key) {
     return (
-      <h1 className="dark:text-gray-200" key={key}>
+      <h1 className="dark:text-neutral-200" key={key}>
         {block.heading_1.text[0].plain_text}
       </h1>
     );
@@ -77,7 +77,7 @@ class Builder {
 
   heading2Block(block, key) {
     return (
-      <h2 className="dark:text-gray-200" key={key}>
+      <h2 className="dark:text-neutral-200" key={key}>
         {block.heading_2.text[0].plain_text}
       </h2>
     );
@@ -85,7 +85,7 @@ class Builder {
 
   heading3Block(block, key) {
     return (
-      <h3 className="dark:text-gray-200" key={key}>
+      <h3 className="dark:text-neutral-200" key={key}>
         {block.heading_3.text[0].plain_text}
       </h3>
     );

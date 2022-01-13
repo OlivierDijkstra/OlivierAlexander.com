@@ -28,7 +28,7 @@ export default function Results() {
 
       <div
         style={highlightStyles}
-        className="bg-gray-500 bg-opacity-5 dark:bg-opacity-20 rounded-sm"
+        className="bg-neutral-500 bg-opacity-5 dark:bg-opacity-20 rounded-sm"
       />
     </div>
   );

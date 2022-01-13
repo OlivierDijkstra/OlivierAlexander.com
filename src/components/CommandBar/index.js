@@ -50,11 +50,11 @@ export default function CommandBar({ children }) {
                 w-full py-2 px-2 rounded-xl"
               >
                 <KBarSearch
-                  className="w-full p-4 outline-none mb-4 bg-gray-50 dark:bg-neutral-800 rounded"
+                  className="w-full p-4 outline-none mb-4 bg-neutral-50 dark:bg-neutral-800 rounded"
                   placeholder="Search"
                 />
 
-                <div className="mt-2 border-t border-gray-200 dark:border-neutral-800">
+                <div className="mt-2 border-t border-neutral-200 dark:border-neutral-800">
                   <Results />
                 </div>
               </div>

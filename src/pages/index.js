@@ -22,10 +22,10 @@ export default function Home({ works }) {
       </Reveal>
 
       <Reveal delay={0.3}>
-        <div className="grid gap-8 md:gap-12 grid-cols-2 mt-24">
+        <div className="grid gap-8 md:gap-12 grid-cols-1 sm:grid-cols-2 mt-24">
           <section>
             <h2 className="mb-1">
-              <span className="font-serif text-lg italic font-medium underline underline-offset-2 text-gray-600">
+              <span className="font-serif text-lg italic font-medium underline underline-offset-2 text-neutral-600">
                 Works
               </span>
             </h2>
@@ -59,7 +59,7 @@ export default function Home({ works }) {
           <section>
             <h2 className="mb-1">
               <Link href="/tools">
-                <a className="font-serif text-lg italic font-medium underline underline-offset-2 text-gray-600">
+                <a className="font-serif text-lg italic font-medium underline underline-offset-2 text-neutral-600">
                   Tools
                 </a>
               </Link>

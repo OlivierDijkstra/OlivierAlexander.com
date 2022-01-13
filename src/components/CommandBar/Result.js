@@ -17,7 +17,7 @@ export default function Result({ item, active, highlight }) {
   }, [active]);
 
   return typeof item === "string" ? (
-    <span className="text-gray-500 text-sm capitalize flex items-center h-12">
+    <span className="text-neutral-500 text-sm capitalize flex items-center h-12">
       {item}
     </span>
   ) : (

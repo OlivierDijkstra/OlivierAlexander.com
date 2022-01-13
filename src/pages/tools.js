@@ -42,23 +42,23 @@ export default function Tools({ tools }) {
                 <article className="group grid auto-cols-max grid-flow-col gap-4 items-center">
                   <span
                     className="grid place-items-center
-                  w-20 h-20 p-2 rounded-full bg-gray-100 dark:bg-neutral-800
-                  text-4xl"
+                      w-12 h-12 sm:w-20 sm:h-20 p-2 rounded-full bg-neutral-100 dark:bg-neutral-800
+                      text-2xl sm:text-4xl"
                   >
                     {icon.rich_text[0].plain_text}
                   </span>
 
-                  <div className="w-80">
-                    <h2 className="font-medium text-xl">
+                  <div className="w-40 sm:w-60 md:w-80">
+                    <h2 className="font-medium text-lg sm:text-xl">
                       {name.title[0].plain_text}
                     </h2>
-                    <p className="text-gray-500">
+                    <p className="text-neutral-500 text-sm sm:text-base">
                       {description.rich_text[0].plain_text}
                     </p>
                   </div>
 
                   <span
-                    className="text-gray-500
+                    className="text-neutral-500
                   transform-gpu transition-transform duration-75
                   group-hover:translate-x-2 "
                   >

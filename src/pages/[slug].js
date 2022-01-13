@@ -37,18 +37,18 @@ export default function Work({ work, blocks, slug }) {
 
       <Reveal>
         <header className="mb-4 prose prose-neutral">
-          <h1 className="font-semibold dark:text-gray-200">
+          <h1 className="font-semibold dark:text-neutral-200">
             {name.title[0].plain_text}
           </h1>
 
-          <h2 className="font-normal text-2xl text-gray-500">
+          <h2 className="font-normal text-2xl text-neutral-500">
             {description.rich_text[0].plain_text}
           </h2>
         </header>
       </Reveal>
 
       <Reveal delay={0.15}>
-        <main className="dark:text-gray-200 prose">{builder.build()}</main>
+        <main className="dark:text-neutral-200 prose">{builder.build()}</main>
       </Reveal>
     </Layout>
   );
