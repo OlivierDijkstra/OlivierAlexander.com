@@ -13,7 +13,7 @@ export default function Work({ work, blocks }) {
   return (
     <Layout>
       <Reveal>
-        <header className="mb-4 prose">
+        <header className="mb-4 prose prose-neutral">
           <h1 className="font-semibold dark:text-gray-200">
             {name.title[0].plain_text}
           </h1>
