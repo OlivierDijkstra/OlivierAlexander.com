@@ -9,13 +9,15 @@ export default function useWorksAction() {
   const router = useRouter();
   const [results, setResults] = useState();
 
-  const defaultAction = {
-    id: searchId,
-    name: "Search works...",
-    shortcut: ["?"],
-    keywords: "works find search work portfolio",
-    section: "Works",
-  };
+  const defaultAction = useMemo(() => {
+    return {
+      id: searchId,
+      name: "Search works...",
+      shortcut: ["?"],
+      keywords: "works find search work portfolio",
+      section: "Works",
+    };
+  }, []);
 
   useEffect(() => {
     fetch("/api/works").then((response) => {
@@ -36,6 +38,7 @@ export default function useWorksAction() {
         parent: searchId,
         name,
         shortcut: [],
+        section: "Works",
         keywords: [name, slug],
         perform: () => router.push(`/${slug}`),
       };
