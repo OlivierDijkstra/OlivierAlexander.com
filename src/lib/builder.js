@@ -1,3 +1,4 @@
+import Code from "@components/Code";
 import TextLink from "@components/TextLink";
 import Image from "next/image";
 import Prism from "prismjs";
@@ -9,25 +10,22 @@ class Builder {
   }
 
   buildCodeBlock(string, language, inline, key) {
-    const html = Prism.highlight(
-      string,
-      Prism.languages.javascript,
-      "javascript"
-    );
+    const html = Prism.highlight(string, Prism.languages.javascript, language);
 
-    return (
-      <pre
-        lang={language}
-        className={`
-            dark:text-gray-200 bg-gray-200 dark:bg-neutral-800
-            language-${inline ? "javascript" : language}
-						${inline ? "inline-block p-0.5 m-0 relative top-1.5" : ""}
+    if (inline) {
+      return (
+        <code
+          key={key}
+          className={`
+          language-${inline ? "javascript" : language}
         `}
-        key={key}
-      >
-        <code dangerouslySetInnerHTML={{ __html: html }} />
-      </pre>
-    );
+        >
+          {string}
+        </code>
+      );
+    }
+
+    return <Code html={html} raw={string} language={language} />;
   }
 
   blockParagraph(block) {

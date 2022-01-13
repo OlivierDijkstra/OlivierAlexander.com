@@ -7,12 +7,18 @@
 @layer base {
   html,
   body {
-    /* font-family: "Inter", sans-serif; */
-
     @apply bg-[#f9f9f9] dark:bg-[#161616] text-gray-800 dark:text-gray-200;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  pre {
+    @apply bg-gray-100 dark:bg-neutral-800 text-black dark:text-white py-2 px-3 my-6 rounded-lg text-sm;
+  }
+
+  code {
+    @apply bg-gray-100 dark:bg-neutral-800 text-black dark:text-white p-1 rounded text-sm;
   }
 }
 

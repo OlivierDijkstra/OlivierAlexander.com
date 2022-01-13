@@ -10,26 +10,6 @@
 /*********************************************************
 * General
 */
-pre[class*="language-"],
-code[class*="language-"] {
-  color: #000000;
-  font-size: 13px;
-  text-shadow: none;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
 pre[class*="language-"]::selection,
 code[class*="language-"]::selection,
 pre[class*="language-"]::mozselection,
@@ -37,35 +17,25 @@ code[class*="language-"]::mozselection {
   text-shadow: none;
   background: #36acaa;
 }
-@media print {
-  pre[class*="language-"],
-  code[class*="language-"] {
-    text-shadow: none;
-  }
-}
-pre[class*="language-"] {
-  overflow: auto;
-}
+
 :not(pre) > code[class*="language-"] {
-  padding: 0.1em 0.3em;
-  border-radius: 0.3em;
   color: #0076ff;
 }
+
 /*********************************************************
 * Tokens
 */
 .namespace {
   opacity: 0.7;
 }
+
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: #888888;
 }
-.token.punctuation {
-  color: #000000;
-}
+
 .token.property,
 .token.tag,
 .token.boolean,
@@ -76,10 +46,6 @@ pre[class*="language-"] {
   color: #0076ff;
 }
 
-.token.property.literal-property {
-  color: #000000;
-}
-
 .token.selector,
 .token.attr-name,
 .token.string,
@@ -88,6 +54,7 @@ pre[class*="language-"] {
 .token.inserted {
   color: #008563;
 }
+
 .token.operator,
 .token.entity,
 .token.url,
@@ -95,40 +62,43 @@ pre[class*="language-"] {
 .style .token.string {
   color: #ff0078;
 }
+
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #ff0080;
 }
+
 .token.function {
   color: #0076ff;
 }
+
 .token.regex,
 .token.important,
 .token.variable {
   color: #0076ff;
 }
+
 .token.important,
 .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }
+
 .token.entity {
   cursor: help;
 }
+
 /*********************************************************
 * Line highlighting
 */
 pre[data-line] {
   position: relative;
 }
-pre[class*="language-"] > code[class*="language-"] {
-  position: relative;
-  z-index: 1;
-  color: #000000 !important;
-}
+
 .line-highlight {
   position: absolute;
   left: 0;
