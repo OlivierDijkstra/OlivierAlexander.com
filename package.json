@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^0.4.12",
-    "@olivieralexander/usetabs": "^0.0.4",
+    "@olivieralexander/usetabs": "^0.0.5",
     "framer-motion": "^5.5.5",
     "kbar": "^0.1.0-beta.24",
     "next": "latest",

@@ -1,6 +1,6 @@
 import useTabs from "@olivieralexander/usetabs";
 import { KBarResults, useMatches } from "kbar";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Result from "./Result";
 
 export default function Results() {
@@ -11,11 +11,11 @@ export default function Results() {
     container: wrapperRef,
   });
 
-  // useEffect(() => {
-  //   if (commandResults.length === 0) {
-  //     setHighlightedTab(null);
-  //   }
-  // }, [commandResults]);
+  useEffect(() => {
+    if (commandResults.length === 0) {
+      setHighlight(null);
+    }
+  }, [commandResults, setHighlight]);
 
   return (
     <div className="relative" ref={wrapperRef}>
