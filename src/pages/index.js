@@ -1,6 +1,7 @@
 import Layout from "@components/Layout";
 import LinkArrow from "@components/LinkArrow";
 import Reveal from "@components/Reveal";
+import TextLink from "@components/TextLink";
 import notion from "@lib/notion";
 import Link from "next/link";
 
@@ -16,8 +17,9 @@ export default function Home({ works }) {
       <Reveal delay={0.15}>
         <p>
           I am a software engineer based in the Netherlands, currently working
-          at GUTS as a frontend developer. This is a place where I share my
-          work, tools and other cool things I found around the web.
+          at <TextLink href="https://guts.tickets">GUTS</TextLink> as a frontend
+          developer. This is a place where I share my work, tools and other cool
+          things I found around the web.
         </p>
       </Reveal>
 
