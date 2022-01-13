@@ -9,6 +9,14 @@ module.exports = {
         sans: ["Inter", "sans-serif"],
         serif: ["Newsreader", "sans-serif"],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            pre: false,
+            code: false,
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
