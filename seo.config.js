@@ -1,4 +1,4 @@
-const description = `I am a software engineer based in the Netherlands, currently working
+const description = `I am a full-stack developer based in the Netherlands, currently working
           at GUTS as a frontend developer. This is a place where I share my
           work, tools and other cool things I found around the web.`;
 
