@@ -95,7 +95,8 @@ class Builder {
     const rgbData = rgbDataURL(255, 255, 255);
 
     return (
-      <div className="w-full h-80 relative" key={key}>
+      // Prose is messing stuff up here. Need to figure out why.
+      <div className="w-full relative" style={{ height: "320px" }} key={key}>
         <Image
           alt=""
           src={block.image.file.url}
@@ -123,6 +124,7 @@ class Builder {
       case "heading_3":
         return this.heading3Block(block, key);
       case "image":
+        console.log("image", block);
         return this.imageBlock(block, key);
       default:
         console.log("unknown block type", block.type);
