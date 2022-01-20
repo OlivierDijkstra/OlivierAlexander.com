@@ -16,8 +16,8 @@ export default function Home({ works }) {
 
       <Reveal delay={0.15}>
         <p>
-          I am a software engineer based in the Netherlands, currently working
-          at <TextLink href="https://guts.tickets">GUTS</TextLink> as a frontend
+          Hello, My name is Olivier. I am currently working at{" "}
+          <TextLink href="https://guts.tickets">GUTS</TextLink> as a frontend
           developer. This is a place where I share my work, tools and other cool
           things I found around the web.
         </p>
